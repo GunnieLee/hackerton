@@ -1,5 +1,6 @@
 package hackerton;
 import java.awt.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -10,15 +11,6 @@ import java.awt.event.WindowListener;
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-import javax.swing.filechooser.FileNameExtensionFilter;
-import javax.swing.plaf.FontUIResource;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.util.Enumeration;
 
 public class Main {
 	static boolean isTap2Show = false;
@@ -68,11 +60,15 @@ public class Main {
 			allBtn = new JButton("모든 상점");
 			myCouponsBtn = new JButton("내 쿠폰함");
 			settingsBtn = new JButton("설정");
-			tap1Panel.setSize(540, 40);
+			tap1Panel.setPreferredSize(new Dimension(540, 40));
 			todayBtn.setPreferredSize(new Dimension(135, 40));
 			allBtn.setPreferredSize(new Dimension(135, 40));
 			myCouponsBtn.setPreferredSize(new Dimension(135, 40));
 			settingsBtn.setPreferredSize(new Dimension(135, 40));
+			todayBtn.setBackground(Color.WHITE);
+			allBtn.setBackground(Color.WHITE);
+			myCouponsBtn.setBackground(Color.WHITE);
+			settingsBtn.setBackground(Color.WHITE);
 			todayBtn.addActionListener(this);
 			allBtn.addActionListener(this);
 			myCouponsBtn.addActionListener(this);
@@ -93,9 +89,10 @@ public class Main {
 			drinkBtn.setPreferredSize(new Dimension(135, 40));
 			convenienceBtn.setPreferredSize(new Dimension(135, 40));
 			playBtn.setPreferredSize(new Dimension(135, 40));
-			drinkBtn = new JButton("음주");
-			convenienceBtn = new JButton("편의");
-			playBtn = new JButton("오락");
+			mealBtn.setBackground(Color.WHITE);
+			drinkBtn.setBackground(Color.WHITE);
+			convenienceBtn.setBackground(Color.WHITE);
+			playBtn.setBackground(Color.WHITE);
 			mealBtn.addActionListener(this);
 			drinkBtn.addActionListener(this);
 			convenienceBtn.addActionListener(this);
@@ -122,7 +119,7 @@ public class Main {
 			
 			
 			tap2Panel.setVisible(false);
-			Font font = new Font("돋움", Font.PLAIN, 13);
+			Font font = new Font("돋움", Font.PLAIN, 15);
 			logoLabel.setFont(font);
 			todayBtn.setFont(font);
 			allBtn.setFont(font);
@@ -136,17 +133,6 @@ public class Main {
 			
 			setVisible(true);
 		}
-		/*
-		public static void setUIFont (javax.swing.plaf.FontUIResource f){
-		    java.util.Enumeration keys = UIManager.getDefaults().keys();
-		    while (keys.hasMoreElements()) {
-		      Object key = keys.nextElement();
-		      Object value = UIManager.get (key);
-		      if (value != null && value instanceof javax.swing.plaf.FontUIResource)
-		        UIManager.put (key, f);
-		    }
-		}
-		*/
 
 		@Override
 		public void valueChanged(ListSelectionEvent arg0) {
@@ -267,6 +253,7 @@ public class Main {
 		}
 		public void showSettings()
 		{
+			
 			
 		}
 	}
