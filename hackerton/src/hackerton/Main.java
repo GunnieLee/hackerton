@@ -1,4 +1,4 @@
-package hackerton;
+
 import java.awt.*;
 
 import java.awt.event.ActionEvent;
@@ -30,6 +30,8 @@ public class Main {
 		JButton convenienceBtn;
 		JButton playBtn;
 		JPanel content;
+		
+		TodaySale salePanel;
 		
 		
 		MainPage()
@@ -132,6 +134,8 @@ public class Main {
 			tap2Panel.setFont(font);
 			
 			setVisible(true);
+			
+			
 		}
 
 		@Override
@@ -241,7 +245,11 @@ public class Main {
 		}
 		public void showToday()
 		{
-			
+			salePanel = new TodaySale();
+			this.add(salePanel, BorderLayout.CENTER);
+			setVisible(true);
+			//revalidate();
+			//repaint();
 		}
 		public void showAll()
 		{
