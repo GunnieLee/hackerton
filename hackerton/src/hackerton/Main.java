@@ -182,27 +182,55 @@ public class Main {
 			if(e.getSource()==todayBtn)
 			{
 				isTap2Show=false;
-				tap2();
+				tap2(isTap2Show);
 				showToday();
 			}
 			else if(e.getSource()==allBtn)
 			{
 				isTap2Show=true;
-				tap2();
+				tap2(isTap2Show);
 				showAll();
 			}
 			else if(e.getSource()==myCouponsBtn)
 			{
 				isTap2Show=false;
-				tap2();
+				tap2(isTap2Show);
 				showMyCoupons();
 			}
 			else if(e.getSource()==settingsBtn)
 			{
 				isTap2Show=false;
-				tap2();
+				tap2(isTap2Show);
 				showSettings();
 			}
+		}
+		
+		public void tap2(boolean tap2)
+		{
+			if(tap2)
+			{
+				tap2Panel.setVisible(true);
+			}
+			else
+			{
+				tap2Panel.setVisible(false);
+			}
+		}
+		public void showToday()
+		{
+			
+		}
+		public void showAll()
+		{
+			
+		}
+		public void showMyCoupons()
+		{
+			
+		}
+		public void showSettings()
+		{
+			
 		}
 	}
 	
